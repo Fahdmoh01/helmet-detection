@@ -1,10 +1,10 @@
 from setuptools import find_packages, setup
 
 AUTHOR_USERNAME = "Fahdmoh01"
-REPO_NAME = "hatespeech"
+REPO_NAME = "helmet-detection"
 
 setup(
-    name="hatespeech",
+    name="helmet-detection",
     version="0.0.1",
     author="Fahd Mohammed",
     author_email="fahdmoh.1@gmail.com",
