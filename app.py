@@ -19,7 +19,7 @@ app.add_middleware(
 )
 
 
-@pp.get("/train")
+@app.get("/train")
 async def training():
     try:
         train_pipeleine = TrainPipeline()
@@ -28,3 +28,18 @@ async def training():
         return Response("Training successful !!")
     except Exception as e:
         return Response(f"Error Occurred!{e}")
+
+
+@app.post("/predict")
+async def prediction(image_file: bytes = File(description="A file is read as bytes")):
+    try:
+        prediction_pipeline = PredictionPipeline()
+        final_output = prediction_pipeline.run_pipeline(image_file)
+
+        return final_output
+    except Exception as e:
+        return JSONResponse(content=f"Error Occurred! {e}", status_code=500)
+
+
+if __name__ == "__main__":
+    app_run(app, host=APP_HOST, port=APP_PORT)
