@@ -4,7 +4,7 @@ AUTHOR_USERNAME = "Fahdmoh01"
 REPO_NAME = "helmet-detection"
 
 setup(
-    name="helmet-detection",
+    name="helmet",
     version="0.0.1",
     author="Fahd Mohammed",
     author_email="fahdmoh.1@gmail.com",

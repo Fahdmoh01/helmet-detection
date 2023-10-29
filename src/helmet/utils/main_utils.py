@@ -2,8 +2,8 @@ import os
 import sys
 import dill
 import base64
-from helmetdetection.logging import logging
-from helmetdetection.exception import HelmetException
+from helmet.logging import logging
+from helmet.exception import HelmetException
 
 
 def save_object(file_path: str, obj: object) -> None:

@@ -5,10 +5,10 @@ from io import StringIO
 from typing import List, Union
 from botocore.exceptions import ClientError
 import boto3
-from helmetdetection.exception import HelmetException
-from helmetdetection.logger import logging
+from helmet.exception import HelmetException
+from helmet.logging import logging
 from mypy_boto3_s3.service_resource import Bucket
-from helmetdetection.constants import *
+from helmet.constants import *
 
 MODEL_SAVE_FORMAT = ".pt"
 
